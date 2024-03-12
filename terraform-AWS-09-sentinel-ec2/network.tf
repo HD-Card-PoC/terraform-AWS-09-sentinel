@@ -25,7 +25,6 @@ resource "aws_security_group" "hdcard-sg" {
     to_port          = 22
     protocol         = "tcp"
     cidr_blocks      = [aws_vpc.hdcard-vpc.cidr_block]
-    ipv6_cidr_blocks = [aws_vpc.hdcard-vpc.ipv6_cidr_block]
   }
 
   egress {
